@@ -1,4 +1,6 @@
+import '../styles/style.less';
 import {JSEventUtils} from "./utils/js-event-utils";
+import _ from 'lodash';
 
 class ToDoApp {
     constructor() {
@@ -29,9 +31,9 @@ class ToDoApp {
 
     renderList() {
         // for rendering initial list
-        for (let i = 0; i < this.toDoItems.length; i++) {
-            this.listItemsPane.appendChild(this.createListItem(this.toDoItems[i]));
-        }
+        _.each(this.toDoItems, function (value) {
+          this.listItemsPane.appendChild(this.createListItem(value));
+        });
     }
 
     updateListFromInput() {

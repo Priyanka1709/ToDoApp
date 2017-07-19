@@ -1,4 +1,6 @@
+const webpack= require("webpack");
 const {resolve}= require("path");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports= () => {
 	const config= {
@@ -6,27 +8,34 @@ module.exports= () => {
 		entry: {
 			app: './js/main.js',
 			vendor: ['lodash']
-		}
+		},
 		output: {
-			path: resolve('dist');
-			filename: "bundle.js",
+			path: resolve('dist'),
+			filename: '[name].js',
 			publicPath: "/dist/"
 		},
 		plugins: [
-	    	new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.js", Infinity),
+	    	new webpack.optimize.CommonsChunkPlugin({name: "vendor",minChunks: Infinity}),
+	    	new ExtractTextPlugin({
+		      filename: "css/styles.css"
+		    })
 	  	],
+	  	devServer: {
+		  port: 8080
+		},
 		module: {
 			loaders: [
 				{
 					test: /\.js$/,
-					loaders: ['babel'],
+					loaders: ['babel-loader'],
 					exclude: /node_modules/
 				},
 				{
 					test: /\.less$/,
-					loaders: ['less-loader'],
-					exclude: /node_modules/
-				},
+					loaders: ExtractTextPlugin.extract({
+			          use: "css-loader!less-loader"
+			        })
+				}
 			]
 		}
 	}
