@@ -1,0 +1,36 @@
+.toDoList{
+    @addButtonMargin: 10px;
+    @inputMargin: 5px;
+    @formGrpPadding: 25px;
+    
+    .addButton {
+        margin: @addButtonMargin;
+    }
+
+    a.close {
+        float: right;
+    }
+
+    li {
+        cursor:default;
+    }
+
+    li>input {
+        float: left;
+        margin: @inputMargin;
+        cursor:pointer;
+    }
+
+    form {
+        display: inline-block;
+    }
+
+    .form-group {
+        text-align: center;
+        padding-bottom: @formGrpPadding;
+    }
+
+    ul li.checked {
+        text-decoration: line-through;
+    }
+}

@@ -1,13 +1,16 @@
 {
   "name": "demo",
   "version": "1.0.0",
-  "scripts": {},
+  "scripts": {
+    "devBuild": "webpack --config webpack.config.js"
+  },
   "author": "Priyanka Karolia",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-connect": "^5.0.0",
-    "gulp-open": "^2.0.0"
+    "less-loader": "^4.0.5",
+    "webpack": "^3.3.0"
   }
 }
