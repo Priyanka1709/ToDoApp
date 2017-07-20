@@ -5,6 +5,7 @@ import _ from 'lodash';
 class ToDoApp {
     constructor() {
         // initialize application
+        debugger;
         this.initialize();
 
         // render initial to do list

@@ -2,10 +2,10 @@
   "name": "demo",
   "version": "1.0.0",
   "scripts": {
-    "devBuild": "webpack",
-    "prodBuild": "webpack -p",
-    "devServer": "webpack-dev-server --progress --colors",
-    "watch": "webpack -w"
+    "devBuild": "webpack --config webpack-dev.config.js",
+    "prodBuild": "webpack --config webpack-prod.config.js -p",
+    "devServer": "webpack-dev-server --config webpack-dev.config.js --progress --colors",
+    "watch": "webpack --config webpack-watch.config.js"
   },
   "author": "Priyanka Karolia",
   "license": "MIT",
@@ -19,8 +19,10 @@
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
+    "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "style-loader": "^0.18.2",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "url-loader": "^0.5.9",
     "webpack": "^3.3.0",
     "webpack-dev-server": "^2.5.1"
