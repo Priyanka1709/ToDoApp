@@ -5,8 +5,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports= {
 	context: resolve('src'),
 	entry: {
-		app: './js/main.js',
-		vendor: ['lodash']
+		app: './js/main.js'
 	},
 	output: {
 		path: resolve('dist'),
