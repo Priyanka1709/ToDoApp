@@ -2,10 +2,9 @@ import '../styles/style.less';
 import {JSEventUtils} from "./utils/js-event-utils";
 import _ from 'lodash';
 
-class ToDoApp {
-    constructor() {
+export class ToDoApp {
+    loadApp() {
         // initialize application
-        debugger;
         this.initialize();
 
         // render initial to do list
@@ -92,7 +91,7 @@ class ToDoApp {
 
         let closeButton = document.createElement('a');
         closeButton.classList.add('close');
-        closeButton.innerText = 'x';
+        closeButton.innerText = 'x  ';
 
         closeButton.addEventListener("click", function (e) {
             // remove the li corresponding to list item
@@ -137,4 +136,5 @@ class ToDoApp {
     }
 }
 
-new ToDoApp();
+var todoApp= new ToDoApp();
+// todoApp.loadApp();

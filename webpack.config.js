@@ -14,7 +14,7 @@ module.exports= {
 		publicPath: "/dist/"
 	},
 	plugins: [
-    	new webpack.optimize.CommonsChunkPlugin({name: "vendor",minChunks: Infinity}),
+    
     	new ExtractTextPlugin({
 	      filename: "css/styles.css"
 	    })

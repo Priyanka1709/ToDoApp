@@ -5,7 +5,8 @@
     "devBuild": "webpack --config webpack-dev.config.js",
     "prodBuild": "webpack --config webpack-prod.config.js -p",
     "devServer": "webpack-dev-server --config webpack-dev.config.js --progress --colors",
-    "watch": "webpack --config webpack-watch.config.js"
+    "watch": "webpack --config webpack-watch.config.js",
+    "test": "karma start"
   },
   "author": "Priyanka Karolia",
   "license": "MIT",
@@ -19,6 +20,13 @@
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
+    "jasmine": "^2.6.0",
+    "jasmine-core": "^2.6.4",
+    "karma": "^1.7.0",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-webpack": "^2.0.4",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "style-loader": "^0.18.2",
